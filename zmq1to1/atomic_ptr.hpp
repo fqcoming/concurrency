@@ -20,6 +20,7 @@
 #ifndef __ZMQ_ATOMIC_PTR_HPP_INCLUDED__
 #define __ZMQ_ATOMIC_PTR_HPP_INCLUDED__
 
+
 #if defined __GNUC__
 #define likely(x) __builtin_expect ((x), 1)
 #define unlikely(x) __builtin_expect ((x), 0)
@@ -27,6 +28,7 @@
 #define likely(x) (x)
 #define unlikely(x) (x)
 #endif
+
 
 #if (defined __i386__ || defined __x86_64__) && defined __GNUC__
 #define ZMQ_ATOMIC_PTR_X86              // 应该走这里去执行
